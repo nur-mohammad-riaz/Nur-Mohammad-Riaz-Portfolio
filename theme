@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nur Mohammad Riaz - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: #6a5acd; /* Purple */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            animation: fadeIn 1s ease-in-out;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700; /* Gold */
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        .project-info {
+            padding: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #6a5acd; /* Purple */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #ffd700; /* Gold */
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #6a5acd; /* Purple */
+            color: #fff;
+        }
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #ffd700; /* Gold */
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nur Mohammad Riaz</h1>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">My Works</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <img src="your-photo.jpg" alt="Nur Mohammad Riaz" style="width: 200px; border-radius: 50%; margin-bottom: 20px;">
+    <p>আমি একজন লেখক। আমার লেখার মাধ্যমে আমি মানুষের মনে প্রভাব ফেলতে চাই। আমি বিভিন্ন বিষয়ে লেখালেখি করি, এবং আমার কাজের মধ্যে গল্প, প্রবন্ধ এবং কবিতা অন্তর্ভুক্ত রয়েছে।</p>
+    <p>আমার জীবন বৃত্তান্ত এবং লেখার কাজের বিস্তারিত তথ্য এখানে উল্লেখ করা হবে।</p>
+</section>
+
+<section id="projects" data-aos="fade-up">
+    <h2>My Works</h2>
+    <div class="project-card" data-aos="fade-up">
+        <img src="project-image1.jpg" alt="Project Title" class="project-image">
+        <div class="project-info">
+            <h3>Project Title 1</h3>
+            <p>Brief description of the project.</p>
+            <a href="project-link1.html" class="btn">View Project</a>
+        </div>
+    </div>
+    <div class="project-card" data-aos="fade-up">
+        <img src="project-image2.jpg" alt="Project Title" class="project-image">
+        <div class="project-info">
+            <h3>Project Title 2</h3>
+            <p>Brief description of the project.</p>
+            <a href="project-link2.html" class="btn">View Project</a>
+        </div>
+    </div>
+    <!-- Add more project cards as needed -->
+</section>
+
+<section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>If you would like to get in touch, please reach out via email at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+    <div class="social-links">
+        <h3>Connect with me:</h3>
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+        <a href="https://twitter.com/your-profile" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/your-profile" target="_blank">Instagram</a>
+        <!-- Add more social links as needed -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Nur Mohammad Riaz. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+    AOS.init();
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
